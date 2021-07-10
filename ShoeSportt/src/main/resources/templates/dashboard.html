@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>ShoeSport</title>
+  </head>
+  <body>
+    <h1>Welcome <span th:text="${name}"></span> to ShoeSport </h1>
+    <br>
+    <a th:href="@{/categories}" class="fas"> List of Category Product </a>
+     <a th:href="@{/activeUser}" class="fas"> List of Users Active</a>
+
+  </body>
+</html>

@@ -1,0 +1,10 @@
+package com.ShoeSportt.ShoeSportt.entity.repository;
+
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.stereotype.Repository;
+
+import com.ShoeSportt.ShoeSportt.entity.Category;
+@Repository
+public interface CategoryRepository extends PagingAndSortingRepository<Category, Integer> {
+
+}
