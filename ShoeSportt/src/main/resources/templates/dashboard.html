@@ -7,7 +7,9 @@
     <h1>Welcome <span th:text="${name}"></span> to ShoeSport </h1>
     <br>
     <a th:href="@{/categories}" class="fas"> List of Category Product </a><br>
-     <a th:href="@{/activeUser}" class="fas"> List of Users Active</a><br>
-
+   <!--   <a th:href="@{/activeUser}" class="fas"> List of Users Active</a><br>
+     <a th:href="@{/allUsers}" class="fas"> All Users</a><br> -->
+      <a th:href="@{/manageUsers}" class="fas"> Manage Users</a><br>
+ <a th:href="login" > LogOut</a><br>
   </body>
 </html>

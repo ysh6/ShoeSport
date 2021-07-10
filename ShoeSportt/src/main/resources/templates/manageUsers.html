@@ -8,17 +8,23 @@
 <body>
   
 	
-	<table>
+
 	
-	<tr th:each="data : ${list}">
+	<!-- <tr th:each="data : ${list}">
             <td><span th:text="${data.user_id}"> ID </span></td>
             <td><span th:text="${data.username}"> UserName </span></td>
              <td><span th:text="${data.email}"> Eamil </span></td>
            
-        </tr>
+        </tr> -->
+        <h2> ListUsers</h2><br>
+        <hr>
         
-     
-	</table>
+         <a th:href="activeUser" > ListActiveUsers</a><br>
+	   <a th:href="allUser" > ListAllUsers</a><br><br>
+	   <br>
+        
+
+<h5> Links</h5>	
 	  <a th:href="dashboard" > Dashboard</a><br>
 	   <a th:href="login" > LogOut</a><br>
 	<!-- <table>

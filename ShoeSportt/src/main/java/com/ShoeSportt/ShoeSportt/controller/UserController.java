@@ -14,6 +14,7 @@ import com.ShoeSportt.ShoeSportt.service.UserService;
 @Controller
 public class UserController {
 	
+
 	@Autowired
 	private UserService userService;
 	@GetMapping("/activeUser")
@@ -22,5 +23,13 @@ public class UserController {
 	 	model.addAttribute("list",list);
 	 	
 	 	return "activeUser";
+	 	
+	}
+	 	@GetMapping("/allUsers")
+		public String listOfAll(Model model) {
+			List<UserDetails>list=userService.listAll();
+		 	model.addAttribute("list",list);
+		 	
+		 	return "allUsers";
 	}
 }

@@ -19,6 +19,7 @@ import com.ShoeSportt.ShoeSportt.service.UserService;
 
 @Controller
 
+
 public class LoginController {
 	
 	@Autowired
@@ -26,6 +27,14 @@ public class LoginController {
 	
 	@Autowired
 	UserService logindetails;
+	
+	
+	@RequestMapping(value="/")
+	public String showLoginPage1(ModelMap model)
+	{
+		return "login";
+	}
+	
 
 	@RequestMapping(value="/login", method=RequestMethod.GET)
 	public String showLoginPage(ModelMap model)
@@ -38,6 +47,14 @@ public class LoginController {
 	{
 		return "dashboard";
 	}
+	
+	
+	@RequestMapping(value="/manageUsers", method=RequestMethod.GET)
+	public String manageUsers(ModelMap model)
+	{
+		return "manageUsers";
+	}
+	
 	
 	
 //	@RequestMapping(value="/activeUser", method=RequestMethod.GET)
