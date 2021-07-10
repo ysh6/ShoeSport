@@ -33,6 +33,13 @@ public class LoginController {
 		return "login";
 	}
 	
+	@RequestMapping(value="/dashboard", method=RequestMethod.GET)
+	public String showDashboard(ModelMap model)
+	{
+		return "dashboard";
+	}
+	
+	
 //	@RequestMapping(value="/activeUser", method=RequestMethod.GET)
 //	public List<UserDetails> showActiveUsers(ModelMap model)
 //	{

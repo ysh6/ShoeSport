@@ -20,5 +20,10 @@ public class UserService {
 	public List<UserDetails> listAll(){
 		return (List<UserDetails>)usrrepo.findAll();
 		}
+	
+	public List<UserDetails> findActiveUser(){
+		return (List<UserDetails>)usrrepo.findactiveUser();
+		}
+	
 
 }

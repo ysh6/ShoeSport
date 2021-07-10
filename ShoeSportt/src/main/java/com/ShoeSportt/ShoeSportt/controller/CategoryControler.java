@@ -20,12 +20,20 @@ public class CategoryControler {
 	
 	@GetMapping("/categories")
 	public String listAll(Model model) {
-		List<Category>listCategories=	service.listAll();
+		List<Category>listCategories=	service.findRootCategories();
 	 	model.addAttribute("listCategories",listCategories);
 	 	
 	 	return "categories";
 	
 	}
 	
+	@GetMapping("/categories/new")
+	public String newCategory(Model model) {
+		List<Category>listCategories=	service.listRootCategory();
+	 	model.addAttribute("category",new Category());
+	 	
+	 	return "category_form";
+	
+	}
 	
 }

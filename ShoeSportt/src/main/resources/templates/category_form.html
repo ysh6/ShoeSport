@@ -1,0 +1,94 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Getting Started: Serving Web Content</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+
+<body>
+
+
+<form th:action="@{/categories/save}" method="post"  th:object="${category}">
+
+<input type="hidden" th:field="*{id}" />
+
+<div>
+<div>
+<label>Category Name</label>
+<div>
+<input type="text" th:field="*{name}" >
+</div>
+</div>
+
+
+<div>
+<label>Alias:</label>
+<div>
+<input type="text" th:field="*{alias}" >
+</div>
+</div>
+
+
+<div>
+<label>Alias:</label>
+<div>
+<input type="text" th:field="*{alias}" >
+</div>
+</div>
+
+
+<div>
+<label>Parent Category:</label>
+<div>
+<select th:field="*{parent}">
+<option value="0">[No Parent]</option>
+<th:block th:each ="cat:${listCategories}">
+<option th:value="${cat.id}">[[${cat.name}]]</option>
+
+</select>
+</div>
+</div>
+
+
+<div>
+<label>Enabled:</label>
+<div>
+<input type="checkbox" th:field="*{enabled}" >
+
+
+</div>
+</div>
+
+
+<div>
+<label>Image:</label>
+<div>
+<input type="hidden" th:field="*{image}" >
+<input type="file" id="fileImage" name="image" accept="image/png,image/jpeg" />
+<img id="thumbnail"alt="Image preview" />
+</div>
+</div>
+
+<div>
+
+<input type="submit" value="Save" >
+<!--  <input type="button" value="Cancel" id="butonCancel"/>-->
+
+
+
+
+</div>
+
+
+
+</div>
+<script type="text/javascript">
+
+moduleURL="[[@{/categories}]]"
+</script>
+
+
+</form>
+
+</body>
+</html>

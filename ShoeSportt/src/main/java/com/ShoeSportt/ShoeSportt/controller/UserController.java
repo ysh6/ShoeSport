@@ -18,7 +18,7 @@ public class UserController {
 	private UserService userService;
 	@GetMapping("/activeUser")
 	public String listAll(Model model) {
-		List<UserDetails>list=userService.listAll();
+		List<UserDetails>list=userService.findActiveUser();
 	 	model.addAttribute("list",list);
 	 	
 	 	return "activeUser";
