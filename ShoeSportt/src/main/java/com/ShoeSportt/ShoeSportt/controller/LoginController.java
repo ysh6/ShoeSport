@@ -76,8 +76,8 @@ public class LoginController {
 //	}
 	
 	
-	@Autowired
-	UserRepository activeUser;
+//	@Autowired
+//	UserRepository activeUser;
 
 //	@RequestMapping(value = "/activeUser", method = RequestMethod.GET)
 //	public String listProducts1(Model map) {

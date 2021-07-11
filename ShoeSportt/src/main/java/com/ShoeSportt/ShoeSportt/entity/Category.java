@@ -44,8 +44,9 @@ public class Category {
 	private Set<Category> children =new HashSet<>();
 	
 
-	
-	
+	@ManyToOne
+	@JoinColumn(name = "pid", nullable = false)
+	private PurchaseEntity purchaseentity;
 
 	public Category() {
 		

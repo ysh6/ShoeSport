@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Getting Started: Serving Web Content</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+  
+	
+	<table>
+	
+	<tr th:each="data : ${list}">
+            <td><span th:text="${data.pid}"> Purchase ID </span></td>
+            <td><span th:text="${data.price}"> UserName </span></td>
+             <td><span th:text="${data.date}"> Date </span></td>
+           
+        </tr>
+        
+     
+	</table>
+	  <a th:href="dashboard" > Dashboard</a><br>
+	   <a th:href="login" > LogOut</a><br>
+	<!-- <table>
+	<tr th:each="data : ${list}">
+	 <td><span th:text="${data.user_id}"> user_id </span></td>
+     <td><span th:text="${data.username}"> username </span></td>
+            <td><span th:text="${data.password}"> password </span></td>
+            <td><span th:text="${data.enable}"> enable </span></td>
+            <td><span th:text="${data.email}"> email </span></td>
+            
+</tr>
+</table> -->
+	
+</body>
+</html>
